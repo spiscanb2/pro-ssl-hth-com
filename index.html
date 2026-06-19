@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hth · 网站技术说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #ffffff;
+      color: #1e2a3a;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1.25rem 4rem;
+    }
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* 顶部导航 – 极简字标 */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.25rem 0 1.75rem;
+      border-bottom: 1px solid #e7edf2;
+      margin-bottom: 3rem;
+    }
+    .nav-brand {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      color: #1e2a3a;
+    }
+    .nav-brand a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .nav-link {
+      font-size: 0.875rem;
+      color: #3b4b5e;
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+    .nav-link:hover {
+      background: #f0f4f8;
+    }
+
+    /* hero 区 – 一句话定位 */
+    .hero {
+      margin-bottom: 3.2rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+      margin-bottom: 0.9rem;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #3e5068;
+      max-width: 560px;
+    }
+
+    /* 场景三卡片模块 */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6f829b;
+      margin-bottom: 1.25rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      flex: 1 1 180px;
+      min-width: 160px;
+      background: #f9fbfd;
+      border-radius: 14px;
+      padding: 1.5rem 1.25rem;
+      border: 1px solid #eef3f8;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0,20,40,0.06);
+      transform: translateY(-2px);
+    }
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #3e5068;
+    }
+
+    /* 核心说明 – 紧凑段落 */
+    .core-text {
+      margin-bottom: 2.8rem;
+    }
+    .core-text h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      border-left: 3px solid #1e2a3a;
+      padding-left: 0.85rem;
+    }
+    .core-text p {
+      margin-bottom: 1rem;
+      color: #253544;
+    }
+
+    /* 常见说明 (faq 摘要) */
+    .faq-summary {
+      margin-bottom: 3.2rem;
+    }
+    .faq-summary h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e7edf2;
+      padding: 1rem 0;
+    }
+    .faq-item:first-of-type {
+      padding-top: 0;
+    }
+    .faq-question {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+    .faq-answer {
+      font-size: 0.9rem;
+      color: #3b4b5e;
+    }
+
+    /* 行内链接样式 */
+    a {
+      color: #1e2a3a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b8c9db;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+    a:hover {
+      color: #0f1a26;
+      text-decoration-color: #1e2a3a;
+    }
+
+    /* 尾部 */
+    .footer-note {
+      font-size: 0.8rem;
+      color: #7a8fa8;
+      border-top: 1px solid #e7edf2;
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      body { padding: 1.5rem 1rem 3rem; }
+      .hero h1 { font-size: 1.6rem; }
+      .cards { gap: 1rem; }
+      .card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 顶部导航 -->
+  <nav class="nav">
+    <span class="nav-brand"><a href="https://pro-ssl-hth.com">hth</a></span>
+    <a href="https://pro-ssl-hth.com" class="nav-link">hth</a>
+  </nav>
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>一眼看懂网站用途</h1>
+    <p>不论你是第一次接触，还是需要快速定位技术功能，<a href="https://pro-ssl-hth.com">hth</a> 都可以帮助你理解当前站点的核心服务与使用场景。</p>
+  </div>
+
+  <!-- 三个场景模块 -->
+  <div>
+    <div class="section-label">常见使用场景</div>
+    <div class="cards">
+      <div class="card">
+        <h3>技术说明</h3>
+        <p>查看 SSL 部署、协议支持及域名验证等基础信息，快速判断站点技术状态。</p>
+      </div>
+      <div class="card">
+        <h3>功能查阅</h3>
+        <p>了解页面集成方式、接口参考以及配置指引，无需在复杂文档中反复翻找。</p>
+      </div>
+      <div class="card">
+        <h3>服务概览</h3>
+        <p>汇总常用工具与入口，面向开发者和运维人员提供一致、轻量的信息结构。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 核心介绍 – 紧凑说明 -->
+  <div class="core-text">
+    <h2>关于 hth 页面定位</h2>
+    <p>本页面旨在提供一个低干扰的介绍入口，帮助你判断当前网站是否满足你的查询或集成需求。所有内容围绕 <a href="https://pro-ssl-hth.com">hth</a> 的技术背景与常见用途展开，不包含夸张承诺，也不引导非必要点击。</p>
+    <p>从实际使用出发，我们整理了三个典型场景：技术说明、功能查阅与服务概览。每个卡片都对应一类常见的用户意图——无论你是想确认协议细节，还是查找配置参数，都能在这里获得起点。</p>
+  </div>
+
+  <!-- 常见说明 (FAQs 摘要) -->
+  <div class="faq-summary">
+    <h2>常见说明</h2>
+    <div class="faq-item">
+      <div class="faq-question">这个页面主要解决什么问题？</div>
+      <div class="faq-answer">帮助用户快速理解网站的技术方向与可用信息，减少反复跳转与猜测。你可以把它看作一份轻量索引。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">页面上提到的「功能查阅」具体指什么？</div>
+      <div class="faq-answer">指与网站集成的技术参考，例如 API 接口说明、参数配置方式、常见返回格式等。这些内容在 <a href="https://pro-ssl-hth.com">hth</a> 中有更完整的呈现。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">我是否需要额外安装工具？</div>
+      <div class="faq-answer">不需要。所有说明和索引均基于网页本身提供的信息，不依赖第三方插件或客户端。</div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    基于实际技术信息整理 · 简洁导航式介绍
+  </div>
+
+</div>
+</body>
+</html>
